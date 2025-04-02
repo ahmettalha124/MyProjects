@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mseteknoloji.com.tr/assets/front/images/favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="bg-white text-[#5D6E83]">
+        <div class="w-full mx-auto px-4 h-12 lg:h-20 flex items-center justify-between">
+            <div class="flex-shrink-0 w-[133px] h-[60px] mt-[10px] lg:ml-[150px]">
+                <a href="#">
+                    <img src="https://mseteknoloji.fra1.cdn.digitaloceanspaces.com/media/382/mseheader.svg" alt="logo" class="h-full w-auto">
+                </a>
+            </div>
+            <div class="lg:hidden flex items-center">
+                <button id="menu-toggle" class="text-gray-500 focus:outline-none focus:text-[#96BC41]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="menu" class="hidden lg:flex w-auto h-[17px] mt-[10px] space-x-[25px] relative">
+                <a href="#" class="hover:text-[#96BC41]">ANA SAYFA</a>
+                <div class="relative group">
+                    <a href="#" class="hover:text-[#96BC41]">ŞİRKET</a>
+                    <div class="absolute left-0 hidden group-hover:flex flex-col bg-white shadow-md mt-2 z-10 w-[190px] border border-[#EAECF0]">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">HAKKIMIZDA</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">MİSYON & VİZYON</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">KARİYER</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">REFERANSLAR</a>
+                    </div>
+                </div>
+                <a href="#" class="hover:text-[#96BC41]">SEKTÖRLER</a>
+                <a href="#" class="hover:text-[#96BC41]">ÜRÜNLER</a>
+                <a href="#" class="hover:text-[#96BC41]">HABERLER</a>
+                <a href="#" class="hover:text-[#96BC41]">İNDİRİLENLER</a>
+                <a href="#" class="hover:text-[#96BC41]">İLETİŞİM</a>
+            </div>
+            <div class="bg-gray-200 text-[#5D6E83] w-[215px] h-[80px] items-center justify-between lg:ml-[150px] ml-[0px] hidden lg:block ">
+                <div class="w-6 h-6 mr-4 ml-5 absolute top-6">
+                   
+                    <div id="flag-icon">
+                        <svg viewBox="0 -4 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_503_4206)">
+                                <rect width="28" height="20" rx="2" fill="white"></rect>
+                                <g mask="url(#mask0_503_4206)">
+                                    <rect width="28" height="20" fill="#E92434"></rect>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.0208 10.7684L17.796 12.2533L17.8795 10.3302L16.0887 9.62423L17.9434 9.1093L18.0615 7.18799L19.1244 8.79287L20.9881 8.31142L19.7902 9.81822L20.8241 11.442L19.0208 10.7684V10.7684V10.7684V10.7684Z"
+                                        fill="white"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M17.4028 13.6838C16.3049 15.0934 14.5916 16 12.6665 16C9.3528 16 6.6665 13.3137 6.6665 10C6.6665 6.68629 9.3528 4 12.6665 4C14.5916 4 16.3049 4.90659 17.4028 6.31611C16.5555 5.70019 15.4902 5.33331 14.333 5.33331C11.5716 5.33331 9.33301 7.42265 9.33301 9.99998C9.33301 12.5773 11.5716 14.6666 14.333 14.6666C15.4902 14.6666 16.5556 14.2997 17.4028 13.6838Z"
+                                        fill="white"></path>
+                                </g>
+                            </g>
+                        </svg>
+                       
+                    </div>
+                    <a href="" class="w-6 h-6 absolute left-36 bottom-1 top-1 hidden lg:block">
+                        <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>search</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-256.000000, -1139.000000)" fill="#000000"> <path d="M269.46,1163.45 C263.17,1163.45 258.071,1158.44 258.071,1152.25 C258.071,1146.06 263.17,1141.04 269.46,1141.04 C275.75,1141.04 280.85,1146.06 280.85,1152.25 C280.85,1158.44 275.75,1163.45 269.46,1163.45 L269.46,1163.45 Z M287.688,1169.25 L279.429,1161.12 C281.591,1158.77 282.92,1155.67 282.92,1152.25 C282.92,1144.93 276.894,1139 269.46,1139 C262.026,1139 256,1144.93 256,1152.25 C256,1159.56 262.026,1165.49 269.46,1165.49 C272.672,1165.49 275.618,1164.38 277.932,1162.53 L286.224,1170.69 C286.629,1171.09 287.284,1171.09 287.688,1170.69 C288.093,1170.3 288.093,1169.65 287.688,1169.25 L287.688,1169.25 Z" id="search" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                    </a>
+                </div>
+            
+                <div class="hidden lg:flex items-center space-x-2">
+                    <select id="language-selector" class="bg-gray-200 text-[#5D6E83] border border-gray-200 px-2 py-1 absolute right-20 top-5">
+                        <option value="tr" selected>TÜRKÇE</option>
+                        <option value="en">ENGLISH</option>
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-white w-full flex flex-col items-center py-4 space-y-4 max-h-0 overflow-hidden transition-all duration-300">
+            <a href="#" class="hover:text-[#96BC41]">ANA SAYFA</a>
+            <a href="#" class="hover:text-[#96BC41]">ŞİRKET</a>
+            <a href="#" class="hover:text-[#96BC41]">SEKTÖRLER</a>
+            <a href="#" class="hover:text-[#96BC41]">ÜRÜNLER</a>
+            <a href="#" class="hover:text-[#96BC41]">HABERLER</a>
+            <a href="#" class="hover:text-[#96BC41]">İNDİRİLENLER</a>
+            <a href="#" class="hover:text-[#96BC41]">İLETİŞİM</a>
+            <select id="mobile-language-selector" class="bg-gray-200 text-[#5D6E83] border border-gray-200 px-2 py-1 rounded w-full">
+                <option value="tr" selected>TÜRKÇE</option>
+                <option value="en">ENGLISH</option>
+            </select>
+        </div>
+    </nav>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('overlay');
+    
+        menuToggle.addEventListener('click', () => {
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+                menu.style.maxHeight = `${menu.scrollHeight}px`;
+                overlay.classList.remove('hidden');
+            } else {
+                menu.style.maxHeight = '0'; 
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                    menu.classList.remove('flex');
+                    menu.style.maxHeight = null; 
+                    overlay.classList.add('hidden'); 
+                }, 300); 
+            }
+        });
+    
+        // Close the menu when the overlay is clicked
+        overlay.addEventListener('click', () => {
+            menu.style.maxHeight = '0'; // Reset the max height for closing
+            setTimeout(() => {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+                menu.style.maxHeight = null;
+                overlay.classList.add('hidden');
+            }, 300);
+        });
+    </script>
+     <div class="swiper-container relative overflow-hidden">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="w-auto h-auto mt-18 flex flex-col lg:flex-row items-center justify-between font-thin font-sans">
+                       <div class="capitalize mt-[50px] lg:mt-[150px] lg:ml-[150px] w-full lg:w-[657px] px-4 lg:px-0">
+                            <h1 class="text-[36px] lg:text-[54px] leading-tight">
+                            Vestibulum <span class="text-[#96BC41]"> felis urna </span> placerat id tempor nec
+                           </h1>
+                           <div class="text-[#5D6E83] text-[14px] lg:text-[16px] mt-4">
+                               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque atque velit est sequi natus nesciunt officia cum voluptatem in labore maxime, voluptas earum ea consequatur recusandae quod veniam praesentium at.</p>
+                           </div>
+                           <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-6">
+                               
+                               <button class="bg-gray-100 text-gray-600 px-4 py-2 flex items-center justify-between space-x-2 w-full sm:w-[200px] h-[50px] hover:bg-gray-300">
+                                   <span>DAHA FAZLA</span>
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                   </svg>
+                               </button>
+                              
+                               <button class="bg-lime-100/50 text-lime-600 px-4 py-2 flex items-center justify-between space-x-2 w-full sm:w-[200px] h-[50px] hover:bg-lime-200">
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-7.824 4.564A1 1 0 016 14.89V9.11a1 1 0 011.428-.916l7.824 4.564a1 1 0 010 1.832z" />
+                                   </svg>
+                                   <span class="border-l border-lime-600 pl-2">VİDEOYU OYNAT</span>
+                               </button>
+                           </div>
+                       </div>
+               
+                       <div class="w-full lg:w-[457px] h-auto lg:h-[651.45px] mt-6 lg:mt-0 lg:mr-[150px] px-4 lg:px-0 hidden lg:block">
+                           <img class="w-full h-auto" src="./assets/image1.png" alt="Resim">
+                       </div>
+                   </div>
+            </div>
+    
+            <div class="swiper-slide">
+                <div class="w-full h-auto mt-18 flex flex-col lg:flex-row items-center justify-between font-thin font-sans">
+                    <div class="capitalize mt-[50px] lg:mt-[150px] lg:ml-[150px] w-full lg:w-[657px] px-4 lg:px-0">
+                        <h1 class="text-[36px] lg:text-[54px] leading-tight">
+                        Vestibulum <span class="text-[#96BC41]"> felis urna </span> placerat id tempor nec
+                       </h1>
+                       <div class="text-[#5D6E83] text-[14px] lg:text-[16px] mt-4">
+                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque atque velit est sequi natus nesciunt officia cum voluptatem in labore maxime, voluptas earum ea consequatur recusandae quod veniam praesentium at.</p>
+                       </div>
+                       <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-6">
+                   
+                           <button class="bg-gray-100 text-gray-600 px-4 py-2 flex items-center justify-between space-x-2 w-full sm:w-[200px] h-[50px] hover:bg-gray-300">
+                               <span>DAHA FAZLA</span>
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                               </svg>
+                           </button>
+               
+                           <button class="bg-lime-100/50 text-lime-600 px-4 py-2 flex items-center justify-between space-x-2 w-full sm:w-[200px] h-[50px] hover:bg-lime-200">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                   <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-7.824 4.564A1 1 0 016 14.89V9.11a1 1 0 011.428-.916l7.824 4.564a1 1 0 010 1.832z" />
+                               </svg>
+                               <span class="border-l border-lime-600 pl-2">VİDEOYU OYNAT</span>
+                           </button>
+                       </div>
+                   </div>
+           
+                    <div class="w-full lg:w-[457px] h-auto lg:h-[651.45px] mt-6 lg:mt-0 lg:mr-[150px] px-4 lg:px-0 hidden lg:block">
+                        <img class="w-full h-auto" src="https://mseteknoloji.fra1.cdn.digitaloceanspaces.com/media/346/conversions/grafit-firin-graphite-furnace-crop.png" alt="Yeni Resim">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="swiper-slide">
+                <div class="w-full h-auto mt-18 flex flex-col lg:flex-row items-center justify-between font-thin font-sans">
+                    <div class="capitalize mt-[50px] lg:mt-[150px] lg:ml-[150px] w-full lg:w-[657px] px-4 lg:px-0">
+                        <h1 class="text-[36px] lg:text-[54px] leading-tight">
+                        Vestibulum <span class="text-[#96BC41]"> felis urna </span> placerat id tempor nec
+                       </h1>
+                       <div class="text-[#5D6E83] text-[14px] lg:text-[16px] mt-4">
+                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque atque velit est sequi natus nesciunt officia cum voluptatem in labore maxime, voluptas earum ea consequatur recusandae quod veniam praesentium at.</p>
+                       </div>
+                       <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-6">
+                        
+                           <button class="bg-gray-100 text-gray-600 px-4 py-2 flex items-center justify-between space-x-2 w-full sm:w-[200px] h-[50px] hover:bg-gray-300">
+                               <span>DAHA FAZLA</span>
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                               </svg>
+                           </button>
+                       
+                           <button class="bg-lime-100/50 text-lime-600 px-4 py-2 flex items-center justify-between space-x-2 w-full sm:w-[200px] h-[50px] hover:bg-lime-200">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                   <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-7.824 4.564A1 1 0 016 14.89V9.11a1 1 0 011.428-.916l7.824 4.564a1 1 0 010 1.832z" />
+                               </svg>
+                               <span class="border-l border-lime-600 pl-2">VİDEOYU OYNAT</span>
+                           </button>
+                       </div>
+                   </div>
+           
+                    <div class="w-full lg:w-[457px] h-auto lg:h-[651.45px] mt-6 lg:mt-0 lg:mr-[150px] px-4 lg:px-0 hidden lg:block">
+                        <img class="w-full h-auto" src="https://mseteknoloji.fra1.cdn.digitaloceanspaces.com/media/389/conversions/vf-1900-1-yuksek-vakum-firini-2-copy-kopya-crop.png" alt="Resim 3">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="swiper-slide">
+                <div class="w-full h-auto mt-18 flex flex-col lg:flex-row items-center justify-between font-thin font-sans">
+                    <div class="capitalize mt-[50px] lg:mt-[150px] lg:ml-[150px] w-full lg:w-[657px] px-4 lg:px-0">
+                        <h1 class="text-[36px] lg:text-[54px] leading-tight">
+                        Vestibulum <span class="text-[#96BC41]"> felis urna </span> placerat id tempor nec
+                       </h1>
+                       <div class="text-[#5D6E83] text-[14px] lg:text-[16px] mt-4">
+                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque atque velit est sequi natus nesciunt officia cum voluptatem in labore maxime, voluptas earum ea consequatur recusandae quod veniam praesentium at.</p>
+                       </div>
+                       <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-6">
+                       
+                           <button class="bg-gray-100 text-gray-600 px-4 py-2 flex items-center justify-between space-x-2 w-full sm:w-[200px] h-[50px] hover:bg-gray-300">
+                               <span>DAHA FAZLA</span>
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                               </svg>
+                           </button>
+                        
+                           <button class="bg-lime-100/50 text-lime-600 px-4 py-2 flex items-center justify-between space-x-2 w-full sm:w-[200px] h-[50px] hover:bg-lime-200">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                   <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-7.824 4.564A1 1 0 016 14.89V9.11a1 1 0 011.428-.916l7.824 4.564a1 1 0 010 1.832z" />
+                               </svg>
+                               <span class="border-l border-lime-600 pl-2">VİDEOYU OYNAT</span>
+                           </button>
+                       </div>
+                   </div>
+           
+                    <div class="w-full lg:w-[457px] h-auto lg:h-[651.45px] mt-6 lg:mt-0 lg:mr-[150px] px-4 lg:px-0 hidden lg:block">
+                        <img class="w-full h-auto" src="https://mseteknoloji.fra1.cdn.digitaloceanspaces.com/media/371/conversions/web-doner-tup-firin-rotary-tube-furnace-crop.jpg" alt="Resim 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="justify-between ml-[150px]">
+            <div class="custom-pagination flex text-gray-400">
+                <span class="current-page">01</span>
+                <span>—</span>
+                <span class="total-pages">07</span>
+            </div>
+            <div class="swiper-pagination flex justify-start ml-[220px]"></div>
+       </div>
+    
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+         const swiper = new Swiper(".swiper-container", {
+             loop: false,
+             pagination: {
+                 el: ".swiper-pagination",
+                 clickable: true,
+             },
+             on: {
+                 slideChange: function () {
+                     const currentPage = document.querySelector(".current-page");
+                     currentPage.textContent = String(swiper.realIndex + 1).padStart(2, "0");
+                 },
+             },
+         });
+     
+         const totalPages = document.querySelector(".total-pages");
+         totalPages.textContent = String(swiper.slides.length).padStart(2, "0");
+     });
+     </script>
+<div class="w-full h-auto mt-14 px-4 lg:px-[150px] flex flex-col lg:flex-row items-center justify-between gap-8 font-thin font-sans">
+  
+    <div class="w-[350px] lg:w-[458px] h-auto">
+        <img 
+            src="./assets/joel-filipe-jU9VAZDGMzs-unsplash 1.png" 
+            alt="Hakkımızda" 
+            class="w-full h-auto"
+        >
+    </div>
+
+    <div class="text-black font-thin font-sans text-[28px] lg:text-[34px] text-center lg:text-left">
+        <h2 class="mb-4">Hakkımızda</h2>
+        <div class="w-full lg:w-[653px] text-[#5D6E83] text-[14px] lg:text-[16px]">
+            <p>
+                Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Elementum eu enim, amet, 
+                elementum bibendum fermentum. Suscipit consectetur netus placerat in hac sagittis.
+                Morbi facilisis congue sit tempor nulla.
+            </p>
+        </div>
+     
+        <button class="bg-gray-100 w-full lg:w-[230px] h-[50px] text-[14px] flex justify-between items-center text-[#5D6E83] px-4 py-2 mt-8 hover:bg-gray-300">
+            <span>DEVAMINI GÖRÜNTÜLE</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+<div class="w-full lg:w-[1140px] h-auto mx-auto text-left py-8 lg:py-16 px-4 font-thin font-sans lg:ml-[136px]">
+    <h2 class="text-2xl md:text-4xl text-black mb-6 lg:mb-8 ">Sayılarla Biz</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 lg:w-[1140px] h-auto">
+
+        <div class="bg-gray-200 p-4 sm:p-6 border border-b-[#96BC41] md:border-r-[#96BC41] lg:border-b-0">
+            <h2 class="text-[28px] sm:text-[34px] text-[#5D6E83]">4000m<sup>2</sup></h2>
+            <p class="text-gray-500 mt-2">Üretim Alanı</p>
+        </div>
+
+        <div class="bg-gray-200 p-4 sm:p-6 border border-b-[#96BC41] lg:border-r-[#96BC41] lg:border-b-0">
+            <h2 class="text-[28px] sm:text-[34px] text-[#5D6E83]">5</h2>
+            <p class="text-gray-500 mt-2">Ürün Grubu</p>
+        </div>
+
+        <div class="bg-gray-200 p-4 sm:p-6 border border-b-[#96BC41] md:border-none lg:border-r-[#96BC41]">
+            <h2 class="text-[28px] sm:text-[34px] text-[#5D6E83]">100+</h2>
+            <p class="text-gray-500 mt-2">Ürün Tipi</p>
+        </div>
+
+        <div class="bg-gray-200 p-4 sm:p-6 border md:border-l-[#96BC41]">
+            <h2 class="text-[28px] sm:text-[34px] text-[#5D6E83]">20</h2>
+            <p class="text-gray-500 mt-2">Ülkeye İhracat</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="w-[400px] lg:w-[1140px] h-auto py-8 lg:py-16 font-thin font-sans mx-auto ml-4 lg:ml-[150px]">
+    <div class="flex justify-between items-center">
+        <h2 class="text-2xl md:text-4xl text-black mb-6 lg:mb-8">Sektörler</h2>
+        <div class="flex gap-2 mr-8">
+           
+            <button class="sektorler-swiper-button-prev bg-gray-100 lg:w-12 lg:h-12 h-9 w-9 hover:bg-gray-300 flex items-center justify-center">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+                    <path d="M17 12H7M7 12L11 16M7 12L11 8" stroke="#5D6E83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>              
+            </button>
+            
+            <button class="sektorler-swiper-button-next bg-gray-100 lg:w-12 lg:h-12 h-9 w-9 hover:bg-gray-300 flex items-center justify-center">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+                    <path d="M7 12H17M17 12L13 8M17 12L13 16" stroke="#5D6E83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+   
+    <div class="swiper sektorlerSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="relative ml-16 lg:ml-auto group">
+                        <img src="./assets/Rectangle 23.png" class="lg:w-[262px] lg:h-80 object-cover" />
+                        <div class="absolute bottom-0 left-0 lg:right-2 right-[74px] bg-black/50 text-white p-3 transition-all duration-300 group-hover:bg-black/70">
+                            Seramik
+                        </div>
+                        <div class="absolute left-4 top-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500  group-hover:translate-y-[-110px]">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute left-1/2 -translate-x-1/2 bottom-4 opacity-0 ease-out group-hover:opacity-100 w-6 h-6">
+                                <path d="M7 12H17M17 12L13 8M17 12L13 16" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+          
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="relative ml-16 lg:ml-auto group">
+                        <img src="https://mseteknoloji.fra1.cdn.digitaloceanspaces.com/media/272/conversions/tempered-glass-crop.jpg" class="w-[262px] h-80 object-cover" />
+                        <div class="absolute bottom-0 left-0 lg:right-2 right-[74px] bg-black/50 text-white p-3 transition-all duration-300 group-hover:bg-black/70">Cam</div>
+                        <div class="absolute left-4 top-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500  group-hover:translate-y-[-110px]">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute left-1/2 -translate-x-1/2 bottom-4 opacity-0 ease-out group-hover:opacity-100 w-6 h-6">
+                                <path d="M7 12H17M17 12L13 8M17 12L13 16" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+          
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="relative ml-16 lg:ml-auto group">
+                        <img src="https://mseteknoloji.fra1.cdn.digitaloceanspaces.com/media/135/conversions/metaurji-ve-malzeme-crop.jpg" class="w-[262px] h-80 object-cover" />
+                        <div class="absolute bottom-0 left-0 lg:right-2 right-[74px] bg-black/50 text-white p-3 transition-all duration-300 group-hover:bg-black/70">Metalurji ve Malzeme</div>
+                        <div class="absolute left-4 top-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500  group-hover:translate-y-[-110px]">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute left-1/2 -translate-x-1/2 bottom-4 opacity-0 ease-out group-hover:opacity-100 w-6 h-6">
+                                <path d="M7 12H17M17 12L13 8M17 12L13 16" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="relative ml-16 lg:ml-auto group">
+                        <img src="./assets/maden.png" class="w-[262px] h-80 object-cover" />
+                        <div class="absolute bottom-0 left-0 lg:right-2 right-[74px] bg-black/50 text-white p-3 transition-all duration-300 group-hover:bg-black/70">Maden</div>
+                        <div class="absolute left-4 top-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500  group-hover:translate-y-[-110px]">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute left-1/2 -translate-x-1/2 bottom-4 opacity-0 ease-out group-hover:opacity-100 w-6 h-6">
+                                <path d="M7 12H17M17 12L13 8M17 12L13 16" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+          
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="relative ml-16 lg:ml-auto group">
+                        <img src="https://mseteknoloji.fra1.cdn.digitaloceanspaces.com/media/226/conversions/otomotiv-crop.jpg" class="w-[262px] h-80 object-cover" />
+                        <div class="absolute bottom-0 left-0 lg:right-2 right-[74px] bg-black/50 text-white p-3 transition-all duration-300 group-hover:bg-black/70">Otomotiv</div>
+                        <div class="absolute left-4 top-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500  group-hover:translate-y-[-110px]">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute left-1/2 -translate-x-1/2 bottom-4 opacity-0 ease-out group-hover:opacity-100 w-6 h-6">
+                                <path d="M7 12H17M17 12L13 8M17 12L13 16" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+           
+             <div class="swiper-slide">
+                <a href="">
+                    <div class="relative ml-16 lg:ml-auto group">
+                        <img src="https://mseteknoloji.fra1.cdn.digitaloceanspaces.com/media/140/conversions/uzay-ve-havacilik-crop.jpg"
+                            class="w-[262px] h-80 object-cover" />
+                        <div class="absolute bottom-0 left-0 lg:right-2 right-[74px] bg-black/50 text-white p-3 transition-all duration-300 group-hover:bg-black/70">
+                            Uzay ve Havacılık
+                        </div>
+                        <div class="absolute left-4 top-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500  group-hover:translate-y-[-110px]">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="absolute left-1/2 -translate-x-1/2 bottom-4 opacity-0 ease-out group-hover:opacity-100 w-6 h-6">
+                                <path d="M7 12H17M17 12L13 8M17 12L13 16" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+             </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+<script>
+  var sektorlerSwiper = new Swiper(".sektorlerSwiper", {
+    slidesPerView: 1, // Mobilde 1 kart
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".sektorler-swiper-button-next",
+      prevEl: ".sektorler-swiper-button-prev",
+    },
+    breakpoints: {
+      1024: { slidesPerView: 4 }, 
+    },
+  });
+</script>
+
+<div class="w-full lg:w-[1140px] h-auto mx-auto text-left py-8 lg:py-16 px-4 font-thin font-sans lg:ml-[136px]">
+    <h2 class="text-2xl md:text-4xl text-black mb-6 lg:mb-8">Ürünler</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="w-auto h-32 md:w-[360px] md:h-64 group hover:bg-[#96BC41] p-6 transition-all duration-300 relative">
+            
+           
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="black" class="absolute top-2 right-2 lg:top-6 lg:right-6 w-6 h-6 opacity-80 group-hover:opacity-100 group-hover:fill-white transition-all">
+                <g id="SVGRepo_iconCarrier"> 
+                    <path d="m 9.5 000.5 c -000.55000781 000 -1 000.449219 -1 1 c 000.000000390006 000.00035156 000.0000007812 000.0006640006 000.00015625 000.00097656 c -000.000000390006 000.000000390006 -000.00011719 000.000000390006 -000.00015625 000.000000390006 c 000.00054688 000.21000938 -000.00011719 000.433594 -000.175781 000.574219 c -000.00058594 000.00046875 -000.125 000.00085938 -000.195313 000.10009375 c -000.285156 000.00089844 -000.589844 -000.00058594 -000.699218 -000.33200031 c 000 000 -000.000000390007 000 -000.0000007813 000.000000390006 c -000.00015625 -000.0003125 -000.00035156 -000.000625 -000.00054687 -000.00089843 c -000.199219 -000.273438 -000.523438 -000.429688 -000.863282 -000.41000157 c -000.19140006 000.00011719 -000.375 000.00078125 -000.53125 000.19140007 c -000.445312 000.324218 -000.546875 000.949218 -000.222656 1.394531 c 000.00023438 000.00027343 000.0005000781 000.0005000781 000.00074219 000.00074219 c 000 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011718 c 000.16400063 000.136719 000.238282 000.355469 000.1875 000.56640006 c -000.00015625 000.0007000313 -000.00046875 000.14000626 -000.0009375 000.199219 c -000.175781 000.242188 -000.50007812 000.3000000781 -000.757812 000.144531 c 000 000 000 000.000000390007 -000.000000390006 000.000000390007 c -000.0003125 -000.00015625 -000.000625 -000.00027344 -000.0009375 -000.0003900063 c -000.00089844 -000.0003125 -000.1875 -000.00046875 -000.28125 -000.00046875 c -000.445313 -000.00015625 -000.84375 000.265625 -000.98000469 000.69140007 c -000.171875 000.523437 000.117187 1.00085937 000.64000625 1.257812 c 000.00035156 000.0000007812 000.0006640006 000.00011719 000.10001562 000.00015625 c 000 000.000000390006 000 000.0000007813 -000.000000390006 000.00015625 c 000.21875 000.00011719 000.41000156 000.144531 000.492188 000.347656 c 000.00027343 000.0006640006 000.00042968 000.14000625 000.00042968 000.214844 c 000 000.3000000781 -000.238281 000.542969 -000.535156 000.5625 c 000.000000390006 000.000000390006 000.000000390006 000.0000007812 000.000000390006 000.00015625 c -000.00035156 000.000000390006 -000.0006640006 000.0000007813 -000.10001562 000.00015625 c -000.523438 000.171875 -000.8125 000.734375 -000.64000625 1.261719 c 000.171875 000.523437 000.734375 000.8125 1.261719 000.64000625 c 000.0003125 -000.00011719 000.000625 -000.00023438 000.0009375 -000.0003900063 c 000.000000390006 000.000000390007 000.000000390006 000.000000390007 000.000000390006 000.0000007813 c 000.00085937 -000.00054688 000.179687 -000.00085938 000.277344 -000.00089844 c 000.113281 -000.0000007812 000.222656 000.00019531 000.32000312 000.0008200031 c 000.000625 000.0003900063 000.12100094 000.00089844 000.16400062 000.152344 c 000.175782 000.242187 000.125 000.574219 -000.10001562 000.761719 l 000.00011719 000.00011718 c -000.00023438 000.00023438 -000.0005000781 000.00046876 -000.00074219 000.00074219 c -000.324219 000.445313 -000.222656 1.0007000313 000.222656 1.398438 c 000.445313 000.324219 1.0007000313 000.222656 1.394532 -000.222657 c 000.00019531 -000.00027343 000.0003900062 -000.00054687 000.00054687 -000.00085937 c 000.000000390006 000 000.000000390006 000 000.0000007813 000.000000390006 c 000.00078124 -000.20003125 000.261718 -000.34375 000.48000468 -000.359375 c 000.00074219 -000.0000007812 000.148438 000.000000390006 000.21875 000.00027344 c 000.28900063 000.00089844 000.449219 000.394531 000.37100094 000.679688 c 000.0000007812 000 000.00011719 000 000.00015625 000.000000390006 c -000.0000007813 000.0003125 -000.00011719 000.0006640006 -000.00015625 000.00097656 c 000 000.55000781 000.449219 1 1 1 s 1 -000.449219 1 -1 c 000 -000.00035156 -000.000000390006 -000.0006640006 -000.0000007812 -000.10001562 h 000.000000390006 c -000.00074219 -000.28900063 000.00089844 -000.589844 000.375 -000.683594 c 000.00074218 -000.00023438 000.148437 -000.0003125 000.222656 -000.00023438 c 000.2000700031 000.00015625 000.394531 000.152344 000.472656 000.359375 c 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 000.00015625 -000.0000007812 c 000.00015625 000.0003125 000.0003125 000.00058593 000.00046875 000.00089843 c 000.328125 000.445313 000.953125 000.546876 1.398438 000.222657 c 000.445312 -000.328125 000.546875 -000.953125 000.21875 -1.398438 c -000.00023438 -000.00027343 -000.00046875 -000.0005000781 -000.00074219 -000.00074219 c 000.000000390006 -000.000000390006 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 c -000.226563 -000.19140006 -000.273438 -000.527344 -000.00097656 -000.769531 c 000.113281 -000.15625 000.296874 -000.238281 000.476562 -000.23000469 c 000.00097656 000.000000390006 000.195312 000.0003125 000.28125 000.00085938 c 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011719 -000.00011719 c 000.00027343 000.00015625 000.00058593 000.0003125 000.00089843 000.00046875 c 000.527344 000.171875 1.00089844 -000.117188 1.261719 -000.64000625 c 000.171875 -000.527344 -000.117187 -1.00089844 -000.64000625 -1.261719 c -000.00035156 -000.0000007812 -000.0006640006 -000.00011719 -000.10001562 -000.00019531 c 000 -000.000000390007 000 -000.0000007813 000.000000390006 -000.00011719 c -000.296875 -000.00019531 -000.535156 -000.265625 -000.535156 -000.56640006 c 000 -000.296875 000.238281 -000.53900063 000.535156 -000.558594 c -000.000000390006 -000.000000390006 -000.000000390006 -000.00011719 -000.000000390006 -000.00015625 c 000.00035156 -000.000000390006 000.0006640006 -000.0000007813 000.10001562 -000.00015625 c 000.523438 -000.171875 000.8125 -000.734375 000.64000625 -1.261719 c -000.136719 -000.421875 -000.535156 -000.70003125 -000.98000469 -000.6875 c -000.0009375 000 -000.19140006 000.00015625 -000.28125 000.00046875 c -000.0003125 000.00015625 -000.000625 000.0003125 -000.00089843 000.00046875 c -000.000000390007 -000.000000390006 -000.0000007813 -000.0000007812 -000.00011719 -000.00015625 c -000.24600094 000.16000156 -000.58200031 000.10001563 -000.757812 -000.144531 c -000.175782 -000.238281 -000.12890007 -000.574219 000.00097656 -000.765625 c -000.000000390006 000 -000.0000007813 -000.000000390006 -000.00011719 -000.0000007812 c 000.00027344 -000.00023438 000.0005000781 -000.00046876 000.00074219 -000.00074219 c 000.328125 -000.445313 000.226562 -1.0007000313 -000.21875 -1.398438 c -000.15625 -000.10009375 -000.339844 -000.175781 -000.53125 -000.1875 c -000.339844 -000.00019531 -000.66400063 000.136719 -000.867188 000.41000157 c -000.00015625 000.0003125 -000.0003125 000.00058593 -000.00046875 000.00089843 c -000.000000390006 000 -000.0000007812 -000.000000390006 -000.00011719 -000.000000390006 c -000.10009374 000.273437 -000.41400062 000.421875 -000.70003124 000.328125 c -000.285157 -000.00089844 -000.445313 -000.394531 -000.37100094 -000.679688 c 000 000 000 000 -000.000000390006 000 c 000.000000390006 -000.00035156 000.0000007812 -000.0006640006 000.0000007812 -000.10001562 c 000 -000.55000781 -000.449219 -1 -1 -1 z m 000 3.5 c 1.37890006 000 2.5 1.12100094 2.5 2.5 s -1.12100094 2.5 -2.5 2.5 s -2.5 -1.12100094 -2.5 -2.5 s 1.12100094 -2.5 2.5 -2.5 z m -7.00011719 6 c -1.367187 000 -2.4999998 1.132812 -2.4999998 2.5 s 1.1328128 2.5 2.4999998 2.5 c 1.367188 000 2.5 -1.132812 2.5 -2.5 s -1.132812 -2.5 -2.5 -2.5 z m 000 2 c 000.28900063 000 000.5 000.21000938 000.5 000.5 s -000.21000937 000.5 -000.5 000.5 c -000.28900062 000 -000.5 -000.21000938 -000.5 -000.5 s 000.21000938 -000.5 000.5 -000.5 z m 000 000"></path>
+                </g>
+            </svg>
+            
+      
+            <h2 class="text-[24px] md:text-[28px] text-black font-medium group-hover:text-white transition-all duration-300">
+                Karıştırıcı ve Homojenizatör
+            </h2>
+            
+      
+            <p class="text-sm text-gray-600 group-hover:text-white transition-all duration-300 mt-3 hidden md:block">
+                Lorem ipsum dolor sit amet, adipiscing elit. Elementum eu enim, amet, elementum bibendum fermentum.
+            </p>
+        
+           
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" 
+                class="w-6 h-6 absolute bottom-5 right-2 stroke-black group-hover:stroke-white transition-all">
+                <path d="M7 12H17M17 12L13 8M17 12L13 16" 
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        
+        </div>
+        <div class="w-auto h-32 md:w-[360px] md:h-64 group hover:bg-[#96BC41] p-6 transition-all duration-300 relative">
+            
+       
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="black" class="absolute top-2 right-2 lg:top-6 lg:right-6 w-6 h-6 opacity-80 group-hover:opacity-100 group-hover:fill-white transition-all">
+                <g id="SVGRepo_iconCarrier"> 
+                    <path d="m 9.5 000.5 c -000.55000781 000 -1 000.449219 -1 1 c 000.000000390006 000.00035156 000.0000007812 000.0006640006 000.00015625 000.00097656 c -000.000000390006 000.000000390006 -000.00011719 000.000000390006 -000.00015625 000.000000390006 c 000.00054688 000.21000938 -000.00011719 000.433594 -000.175781 000.574219 c -000.00058594 000.00046875 -000.125 000.00085938 -000.195313 000.10009375 c -000.285156 000.00089844 -000.589844 -000.00058594 -000.699218 -000.33200031 c 000 000 -000.000000390007 000 -000.0000007813 000.000000390006 c -000.00015625 -000.0003125 -000.00035156 -000.000625 -000.00054687 -000.00089843 c -000.199219 -000.273438 -000.523438 -000.429688 -000.863282 -000.41000157 c -000.19140006 000.00011719 -000.375 000.00078125 -000.53125 000.19140007 c -000.445312 000.324218 -000.546875 000.949218 -000.222656 1.394531 c 000.00023438 000.00027343 000.0005000781 000.0005000781 000.00074219 000.00074219 c 000 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011718 c 000.16400063 000.136719 000.238282 000.355469 000.1875 000.56640006 c -000.00015625 000.0007000313 -000.00046875 000.14000626 -000.0009375 000.199219 c -000.175781 000.242188 -000.50007812 000.3000000781 -000.757812 000.144531 c 000 000 000 000.000000390007 -000.000000390006 000.000000390007 c -000.0003125 -000.00015625 -000.000625 -000.00027344 -000.0009375 -000.0003900063 c -000.00089844 -000.0003125 -000.1875 -000.00046875 -000.28125 -000.00046875 c -000.445313 -000.00015625 -000.84375 000.265625 -000.98000469 000.69140007 c -000.171875 000.523437 000.117187 1.00085937 000.64000625 1.257812 c 000.00035156 000.0000007812 000.0006640006 000.00011719 000.10001562 000.00015625 c 000 000.000000390006 000 000.0000007813 -000.000000390006 000.00015625 c 000.21875 000.00011719 000.41000156 000.144531 000.492188 000.347656 c 000.00027343 000.0006640006 000.00042968 000.14000625 000.00042968 000.214844 c 000 000.3000000781 -000.238281 000.542969 -000.535156 000.5625 c 000.000000390006 000.000000390006 000.000000390006 000.0000007812 000.000000390006 000.00015625 c -000.00035156 000.000000390006 -000.0006640006 000.0000007813 -000.10001562 000.00015625 c -000.523438 000.171875 -000.8125 000.734375 -000.64000625 1.261719 c 000.171875 000.523437 000.734375 000.8125 1.261719 000.64000625 c 000.0003125 -000.00011719 000.000625 -000.00023438 000.0009375 -000.0003900063 c 000.000000390006 000.000000390007 000.000000390006 000.000000390007 000.000000390006 000.0000007813 c 000.00085937 -000.00054688 000.179687 -000.00085938 000.277344 -000.00089844 c 000.113281 -000.0000007812 000.222656 000.00019531 000.32000312 000.0008200031 c 000.000625 000.0003900063 000.12100094 000.00089844 000.16400062 000.152344 c 000.175782 000.242187 000.125 000.574219 -000.10001562 000.761719 l 000.00011719 000.00011718 c -000.00023438 000.00023438 -000.0005000781 000.00046876 -000.00074219 000.00074219 c -000.324219 000.445313 -000.222656 1.0007000313 000.222656 1.398438 c 000.445313 000.324219 1.0007000313 000.222656 1.394532 -000.222657 c 000.00019531 -000.00027343 000.0003900062 -000.00054687 000.00054687 -000.00085937 c 000.000000390006 000 000.000000390006 000 000.0000007813 000.000000390006 c 000.00078124 -000.20003125 000.261718 -000.34375 000.48000468 -000.359375 c 000.00074219 -000.0000007812 000.148438 000.000000390006 000.21875 000.00027344 c 000.28900063 000.00089844 000.449219 000.394531 000.37100094 000.679688 c 000.0000007812 000 000.00011719 000 000.00015625 000.000000390006 c -000.0000007813 000.0003125 -000.00011719 000.0006640006 -000.00015625 000.00097656 c 000 000.55000781 000.449219 1 1 1 s 1 -000.449219 1 -1 c 000 -000.00035156 -000.000000390006 -000.0006640006 -000.0000007812 -000.10001562 h 000.000000390006 c -000.00074219 -000.28900063 000.00089844 -000.589844 000.375 -000.683594 c 000.00074218 -000.00023438 000.148437 -000.0003125 000.222656 -000.00023438 c 000.2000700031 000.00015625 000.394531 000.152344 000.472656 000.359375 c 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 000.00015625 -000.0000007812 c 000.00015625 000.0003125 000.0003125 000.00058593 000.00046875 000.00089843 c 000.328125 000.445313 000.953125 000.546876 1.398438 000.222657 c 000.445312 -000.328125 000.546875 -000.953125 000.21875 -1.398438 c -000.00023438 -000.00027343 -000.00046875 -000.0005000781 -000.00074219 -000.00074219 c 000.000000390006 -000.000000390006 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 c -000.226563 -000.19140006 -000.273438 -000.527344 -000.00097656 -000.769531 c 000.113281 -000.15625 000.296874 -000.238281 000.476562 -000.23000469 c 000.00097656 000.000000390006 000.195312 000.0003125 000.28125 000.00085938 c 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011719 -000.00011719 c 000.00027343 000.00015625 000.00058593 000.0003125 000.00089843 000.00046875 c 000.527344 000.171875 1.00089844 -000.117188 1.261719 -000.64000625 c 000.171875 -000.527344 -000.117187 -1.00089844 -000.64000625 -1.261719 c -000.00035156 -000.0000007812 -000.0006640006 -000.00011719 -000.10001562 -000.00019531 c 000 -000.000000390007 000 -000.0000007813 000.000000390006 -000.00011719 c -000.296875 -000.00019531 -000.535156 -000.265625 -000.535156 -000.56640006 c 000 -000.296875 000.238281 -000.53900063 000.535156 -000.558594 c -000.000000390006 -000.000000390006 -000.000000390006 -000.00011719 -000.000000390006 -000.00015625 c 000.00035156 -000.000000390006 000.0006640006 -000.0000007813 000.10001562 -000.00015625 c 000.523438 -000.171875 000.8125 -000.734375 000.64000625 -1.261719 c -000.136719 -000.421875 -000.535156 -000.70003125 -000.98000469 -000.6875 c -000.0009375 000 -000.19140006 000.00015625 -000.28125 000.00046875 c -000.0003125 000.00015625 -000.000625 000.0003125 -000.00089843 000.00046875 c -000.000000390007 -000.000000390006 -000.0000007813 -000.0000007812 -000.00011719 -000.00015625 c -000.24600094 000.16000156 -000.58200031 000.10001563 -000.757812 -000.144531 c -000.175782 -000.238281 -000.12890007 -000.574219 000.00097656 -000.765625 c -000.000000390006 000 -000.0000007813 -000.000000390006 -000.00011719 -000.0000007812 c 000.00027344 -000.00023438 000.0005000781 -000.00046876 000.00074219 -000.00074219 c 000.328125 -000.445313 000.226562 -1.0007000313 -000.21875 -1.398438 c -000.15625 -000.10009375 -000.339844 -000.175781 -000.53125 -000.1875 c -000.339844 -000.00019531 -000.66400063 000.136719 -000.867188 000.41000157 c -000.00015625 000.0003125 -000.0003125 000.00058593 -000.00046875 000.00089843 c -000.000000390006 000 -000.0000007812 -000.000000390006 -000.00011719 -000.000000390006 c -000.10009374 000.273437 -000.41400062 000.421875 -000.70003124 000.328125 c -000.285157 -000.00089844 -000.445313 -000.394531 -000.37100094 -000.679688 c 000 000 000 000 -000.000000390006 000 c 000.000000390006 -000.00035156 000.0000007812 -000.0006640006 000.0000007812 -000.10001562 c 000 -000.55000781 -000.449219 -1 -1 -1 z m 000 3.5 c 1.37890006 000 2.5 1.12100094 2.5 2.5 s -1.12100094 2.5 -2.5 2.5 s -2.5 -1.12100094 -2.5 -2.5 s 1.12100094 -2.5 2.5 -2.5 z m -7.00011719 6 c -1.367187 000 -2.4999998 1.132812 -2.4999998 2.5 s 1.1328128 2.5 2.4999998 2.5 c 1.367188 000 2.5 -1.132812 2.5 -2.5 s -1.132812 -2.5 -2.5 -2.5 z m 000 2 c 000.28900063 000 000.5 000.21000938 000.5 000.5 s -000.21000937 000.5 -000.5 000.5 c -000.28900062 000 -000.5 -000.21000938 -000.5 -000.5 s 000.21000938 -000.5 000.5 -000.5 z m 000 000"></path>
+                </g>
+            </svg>
+            
+   
+            <h2 class="text-[24px] md:text-[28px] text-black font-medium group-hover:text-white transition-all duration-300">
+                Şekillendirme ve <br> Biçimlendirme
+            </h2>
+            
+          
+            <p class="text-sm text-gray-600 group-hover:text-white transition-all duration-300 mt-3 hidden md:block">
+                Lorem ipsum dolor sit amet, adipiscing elit.
+            </p>
+        
+          
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" 
+                class="w-6 h-6 absolute bottom-5 right-2 stroke-black group-hover:stroke-white transition-all">
+                <path d="M7 12H17M17 12L13 8M17 12L13 16" 
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        
+        </div>
+
+        <div class="w-auto h-32 md:w-[360px] md:h-64 group hover:bg-[#96BC41] p-6 transition-all duration-300 relative">
+            
+        
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="black" class="absolute top-2 right-2 lg:top-6 lg:right-6 w-6 h-6 opacity-80 group-hover:opacity-100 group-hover:fill-white transition-all">
+            <g id="SVGRepo_iconCarrier"> 
+                <path d="m 9.5 000.5 c -000.55000781 000 -1 000.449219 -1 1 c 000.000000390006 000.00035156 000.0000007812 000.0006640006 000.00015625 000.00097656 c -000.000000390006 000.000000390006 -000.00011719 000.000000390006 -000.00015625 000.000000390006 c 000.00054688 000.21000938 -000.00011719 000.433594 -000.175781 000.574219 c -000.00058594 000.00046875 -000.125 000.00085938 -000.195313 000.10009375 c -000.285156 000.00089844 -000.589844 -000.00058594 -000.699218 -000.33200031 c 000 000 -000.000000390007 000 -000.0000007813 000.000000390006 c -000.00015625 -000.0003125 -000.00035156 -000.000625 -000.00054687 -000.00089843 c -000.199219 -000.273438 -000.523438 -000.429688 -000.863282 -000.41000157 c -000.19140006 000.00011719 -000.375 000.00078125 -000.53125 000.19140007 c -000.445312 000.324218 -000.546875 000.949218 -000.222656 1.394531 c 000.00023438 000.00027343 000.0005000781 000.0005000781 000.00074219 000.00074219 c 000 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011718 c 000.16400063 000.136719 000.238282 000.355469 000.1875 000.56640006 c -000.00015625 000.0007000313 -000.00046875 000.14000626 -000.0009375 000.199219 c -000.175781 000.242188 -000.50007812 000.3000000781 -000.757812 000.144531 c 000 000 000 000.000000390007 -000.000000390006 000.000000390007 c -000.0003125 -000.00015625 -000.000625 -000.00027344 -000.0009375 -000.0003900063 c -000.00089844 -000.0003125 -000.1875 -000.00046875 -000.28125 -000.00046875 c -000.445313 -000.00015625 -000.84375 000.265625 -000.98000469 000.69140007 c -000.171875 000.523437 000.117187 1.00085937 000.64000625 1.257812 c 000.00035156 000.0000007812 000.0006640006 000.00011719 000.10001562 000.00015625 c 000 000.000000390006 000 000.0000007813 -000.000000390006 000.00015625 c 000.21875 000.00011719 000.41000156 000.144531 000.492188 000.347656 c 000.00027343 000.0006640006 000.00042968 000.14000625 000.00042968 000.214844 c 000 000.3000000781 -000.238281 000.542969 -000.535156 000.5625 c 000.000000390006 000.000000390006 000.000000390006 000.0000007812 000.000000390006 000.00015625 c -000.00035156 000.000000390006 -000.0006640006 000.0000007813 -000.10001562 000.00015625 c -000.523438 000.171875 -000.8125 000.734375 -000.64000625 1.261719 c 000.171875 000.523437 000.734375 000.8125 1.261719 000.64000625 c 000.0003125 -000.00011719 000.000625 -000.00023438 000.0009375 -000.0003900063 c 000.000000390006 000.000000390007 000.000000390006 000.000000390007 000.000000390006 000.0000007813 c 000.00085937 -000.00054688 000.179687 -000.00085938 000.277344 -000.00089844 c 000.113281 -000.0000007812 000.222656 000.00019531 000.32000312 000.0008200031 c 000.000625 000.0003900063 000.12100094 000.00089844 000.16400062 000.152344 c 000.175782 000.242187 000.125 000.574219 -000.10001562 000.761719 l 000.00011719 000.00011718 c -000.00023438 000.00023438 -000.0005000781 000.00046876 -000.00074219 000.00074219 c -000.324219 000.445313 -000.222656 1.0007000313 000.222656 1.398438 c 000.445313 000.324219 1.0007000313 000.222656 1.394532 -000.222657 c 000.00019531 -000.00027343 000.0003900062 -000.00054687 000.00054687 -000.00085937 c 000.000000390006 000 000.000000390006 000 000.0000007813 000.000000390006 c 000.00078124 -000.20003125 000.261718 -000.34375 000.48000468 -000.359375 c 000.00074219 -000.0000007812 000.148438 000.000000390006 000.21875 000.00027344 c 000.28900063 000.00089844 000.449219 000.394531 000.37100094 000.679688 c 000.0000007812 000 000.00011719 000 000.00015625 000.000000390006 c -000.0000007813 000.0003125 -000.00011719 000.0006640006 -000.00015625 000.00097656 c 000 000.55000781 000.449219 1 1 1 s 1 -000.449219 1 -1 c 000 -000.00035156 -000.000000390006 -000.0006640006 -000.0000007812 -000.10001562 h 000.000000390006 c -000.00074219 -000.28900063 000.00089844 -000.589844 000.375 -000.683594 c 000.00074218 -000.00023438 000.148437 -000.0003125 000.222656 -000.00023438 c 000.2000700031 000.00015625 000.394531 000.152344 000.472656 000.359375 c 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 000.00015625 -000.0000007812 c 000.00015625 000.0003125 000.0003125 000.00058593 000.00046875 000.00089843 c 000.328125 000.445313 000.953125 000.546876 1.398438 000.222657 c 000.445312 -000.328125 000.546875 -000.953125 000.21875 -1.398438 c -000.00023438 -000.00027343 -000.00046875 -000.0005000781 -000.00074219 -000.00074219 c 000.000000390006 -000.000000390006 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 c -000.226563 -000.19140006 -000.273438 -000.527344 -000.00097656 -000.769531 c 000.113281 -000.15625 000.296874 -000.238281 000.476562 -000.23000469 c 000.00097656 000.000000390006 000.195312 000.0003125 000.28125 000.00085938 c 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011719 -000.00011719 c 000.00027343 000.00015625 000.00058593 000.0003125 000.00089843 000.00046875 c 000.527344 000.171875 1.00089844 -000.117188 1.261719 -000.64000625 c 000.171875 -000.527344 -000.117187 -1.00089844 -000.64000625 -1.261719 c -000.00035156 -000.0000007812 -000.0006640006 -000.00011719 -000.10001562 -000.00019531 c 000 -000.000000390007 000 -000.0000007813 000.000000390006 -000.00011719 c -000.296875 -000.00019531 -000.535156 -000.265625 -000.535156 -000.56640006 c 000 -000.296875 000.238281 -000.53900063 000.535156 -000.558594 c -000.000000390006 -000.000000390006 -000.000000390006 -000.00011719 -000.000000390006 -000.00015625 c 000.00035156 -000.000000390006 000.0006640006 -000.0000007813 000.10001562 -000.00015625 c 000.523438 -000.171875 000.8125 -000.734375 000.64000625 -1.261719 c -000.136719 -000.421875 -000.535156 -000.70003125 -000.98000469 -000.6875 c -000.0009375 000 -000.19140006 000.00015625 -000.28125 000.00046875 c -000.0003125 000.00015625 -000.000625 000.0003125 -000.00089843 000.00046875 c -000.000000390007 -000.000000390006 -000.0000007813 -000.0000007812 -000.00011719 -000.00015625 c -000.24600094 000.16000156 -000.58200031 000.10001563 -000.757812 -000.144531 c -000.175782 -000.238281 -000.12890007 -000.574219 000.00097656 -000.765625 c -000.000000390006 000 -000.0000007813 -000.000000390006 -000.00011719 -000.0000007812 c 000.00027344 -000.00023438 000.0005000781 -000.00046876 000.00074219 -000.00074219 c 000.328125 -000.445313 000.226562 -1.0007000313 -000.21875 -1.398438 c -000.15625 -000.10009375 -000.339844 -000.175781 -000.53125 -000.1875 c -000.339844 -000.00019531 -000.66400063 000.136719 -000.867188 000.41000157 c -000.00015625 000.0003125 -000.0003125 000.00058593 -000.00046875 000.00089843 c -000.000000390006 000 -000.0000007812 -000.000000390006 -000.00011719 -000.000000390006 c -000.10009374 000.273437 -000.41400062 000.421875 -000.70003124 000.328125 c -000.285157 -000.00089844 -000.445313 -000.394531 -000.37100094 -000.679688 c 000 000 000 000 -000.000000390006 000 c 000.000000390006 -000.00035156 000.0000007812 -000.0006640006 000.0000007812 -000.10001562 c 000 -000.55000781 -000.449219 -1 -1 -1 z m 000 3.5 c 1.37890006 000 2.5 1.12100094 2.5 2.5 s -1.12100094 2.5 -2.5 2.5 s -2.5 -1.12100094 -2.5 -2.5 s 1.12100094 -2.5 2.5 -2.5 z m -7.00011719 6 c -1.367187 000 -2.4999998 1.132812 -2.4999998 2.5 s 1.1328128 2.5 2.4999998 2.5 c 1.367188 000 2.5 -1.132812 2.5 -2.5 s -1.132812 -2.5 -2.5 -2.5 z m 000 2 c 000.28900063 000 000.5 000.21000938 000.5 000.5 s -000.21000937 000.5 -000.5 000.5 c -000.28900062 000 -000.5 -000.21000938 -000.5 -000.5 s 000.21000938 -000.5 000.5 -000.5 z m 000 000"></path>
+            </g>
+        </svg>
+
+            
+           
+            <h2 class="text-[24px] md:text-[28px] text-black font-medium group-hover:text-white transition-all duration-300">
+                Enerji Sistemleri
+            </h2>
+            
+         
+            <p class="text-sm text-gray-600 group-hover:text-white transition-all duration-300 mt-3 hidden md:block">
+                Lorem ipsum dolor sit amet, adipiscing elit. Elementum eu enim, amet, elementum bibendum fermentum.
+            </p>
+        
+      
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" 
+                class="w-6 h-6 absolute bottom-5 right-2 stroke-black group-hover:stroke-white transition-all">
+                <path d="M7 12H17M17 12L13 8M17 12L13 16" 
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        
+        </div>
+
+        <div class="w-auto h-32 md:w-[360px] md:h-64 group hover:bg-[#96BC41] p-6 transition-all duration-300 relative">
+            
+  
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="black" class="absolute top-2 right-2 lg:top-6 lg:right-6 w-6 h-6 opacity-80 group-hover:opacity-100 group-hover:fill-white transition-all">
+                <g id="SVGRepo_iconCarrier"> 
+                    <path d="m 9.5 000.5 c -000.55000781 000 -1 000.449219 -1 1 c 000.000000390006 000.00035156 000.0000007812 000.0006640006 000.00015625 000.00097656 c -000.000000390006 000.000000390006 -000.00011719 000.000000390006 -000.00015625 000.000000390006 c 000.00054688 000.21000938 -000.00011719 000.433594 -000.175781 000.574219 c -000.00058594 000.00046875 -000.125 000.00085938 -000.195313 000.10009375 c -000.285156 000.00089844 -000.589844 -000.00058594 -000.699218 -000.33200031 c 000 000 -000.000000390007 000 -000.0000007813 000.000000390006 c -000.00015625 -000.0003125 -000.00035156 -000.000625 -000.00054687 -000.00089843 c -000.199219 -000.273438 -000.523438 -000.429688 -000.863282 -000.41000157 c -000.19140006 000.00011719 -000.375 000.00078125 -000.53125 000.19140007 c -000.445312 000.324218 -000.546875 000.949218 -000.222656 1.394531 c 000.00023438 000.00027343 000.0005000781 000.0005000781 000.00074219 000.00074219 c 000 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011718 c 000.16400063 000.136719 000.238282 000.355469 000.1875 000.56640006 c -000.00015625 000.0007000313 -000.00046875 000.14000626 -000.0009375 000.199219 c -000.175781 000.242188 -000.50007812 000.3000000781 -000.757812 000.144531 c 000 000 000 000.000000390007 -000.000000390006 000.000000390007 c -000.0003125 -000.00015625 -000.000625 -000.00027344 -000.0009375 -000.0003900063 c -000.00089844 -000.0003125 -000.1875 -000.00046875 -000.28125 -000.00046875 c -000.445313 -000.00015625 -000.84375 000.265625 -000.98000469 000.69140007 c -000.171875 000.523437 000.117187 1.00085937 000.64000625 1.257812 c 000.00035156 000.0000007812 000.0006640006 000.00011719 000.10001562 000.00015625 c 000 000.000000390006 000 000.0000007813 -000.000000390006 000.00015625 c 000.21875 000.00011719 000.41000156 000.144531 000.492188 000.347656 c 000.00027343 000.0006640006 000.00042968 000.14000625 000.00042968 000.214844 c 000 000.3000000781 -000.238281 000.542969 -000.535156 000.5625 c 000.000000390006 000.000000390006 000.000000390006 000.0000007812 000.000000390006 000.00015625 c -000.00035156 000.000000390006 -000.0006640006 000.0000007813 -000.10001562 000.00015625 c -000.523438 000.171875 -000.8125 000.734375 -000.64000625 1.261719 c 000.171875 000.523437 000.734375 000.8125 1.261719 000.64000625 c 000.0003125 -000.00011719 000.000625 -000.00023438 000.0009375 -000.0003900063 c 000.000000390006 000.000000390007 000.000000390006 000.000000390007 000.000000390006 000.0000007813 c 000.00085937 -000.00054688 000.179687 -000.00085938 000.277344 -000.00089844 c 000.113281 -000.0000007812 000.222656 000.00019531 000.32000312 000.0008200031 c 000.000625 000.0003900063 000.12100094 000.00089844 000.16400062 000.152344 c 000.175782 000.242187 000.125 000.574219 -000.10001562 000.761719 l 000.00011719 000.00011718 c -000.00023438 000.00023438 -000.0005000781 000.00046876 -000.00074219 000.00074219 c -000.324219 000.445313 -000.222656 1.0007000313 000.222656 1.398438 c 000.445313 000.324219 1.0007000313 000.222656 1.394532 -000.222657 c 000.00019531 -000.00027343 000.0003900062 -000.00054687 000.00054687 -000.00085937 c 000.000000390006 000 000.000000390006 000 000.0000007813 000.000000390006 c 000.00078124 -000.20003125 000.261718 -000.34375 000.48000468 -000.359375 c 000.00074219 -000.0000007812 000.148438 000.000000390006 000.21875 000.00027344 c 000.28900063 000.00089844 000.449219 000.394531 000.37100094 000.679688 c 000.0000007812 000 000.00011719 000 000.00015625 000.000000390006 c -000.0000007813 000.0003125 -000.00011719 000.0006640006 -000.00015625 000.00097656 c 000 000.55000781 000.449219 1 1 1 s 1 -000.449219 1 -1 c 000 -000.00035156 -000.000000390006 -000.0006640006 -000.0000007812 -000.10001562 h 000.000000390006 c -000.00074219 -000.28900063 000.00089844 -000.589844 000.375 -000.683594 c 000.00074218 -000.00023438 000.148437 -000.0003125 000.222656 -000.00023438 c 000.2000700031 000.00015625 000.394531 000.152344 000.472656 000.359375 c 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 000.00015625 -000.0000007812 c 000.00015625 000.0003125 000.0003125 000.00058593 000.00046875 000.00089843 c 000.328125 000.445313 000.953125 000.546876 1.398438 000.222657 c 000.445312 -000.328125 000.546875 -000.953125 000.21875 -1.398438 c -000.00023438 -000.00027343 -000.00046875 -000.0005000781 -000.00074219 -000.00074219 c 000.000000390006 -000.000000390006 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 c -000.226563 -000.19140006 -000.273438 -000.527344 -000.00097656 -000.769531 c 000.113281 -000.15625 000.296874 -000.238281 000.476562 -000.23000469 c 000.00097656 000.000000390006 000.195312 000.0003125 000.28125 000.00085938 c 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011719 -000.00011719 c 000.00027343 000.00015625 000.00058593 000.0003125 000.00089843 000.00046875 c 000.527344 000.171875 1.00089844 -000.117188 1.261719 -000.64000625 c 000.171875 -000.527344 -000.117187 -1.00089844 -000.64000625 -1.261719 c -000.00035156 -000.0000007812 -000.0006640006 -000.00011719 -000.10001562 -000.00019531 c 000 -000.000000390007 000 -000.0000007813 000.000000390006 -000.00011719 c -000.296875 -000.00019531 -000.535156 -000.265625 -000.535156 -000.56640006 c 000 -000.296875 000.238281 -000.53900063 000.535156 -000.558594 c -000.000000390006 -000.000000390006 -000.000000390006 -000.00011719 -000.000000390006 -000.00015625 c 000.00035156 -000.000000390006 000.0006640006 -000.0000007813 000.10001562 -000.00015625 c 000.523438 -000.171875 000.8125 -000.734375 000.64000625 -1.261719 c -000.136719 -000.421875 -000.535156 -000.70003125 -000.98000469 -000.6875 c -000.0009375 000 -000.19140006 000.00015625 -000.28125 000.00046875 c -000.0003125 000.00015625 -000.000625 000.0003125 -000.00089843 000.00046875 c -000.000000390007 -000.000000390006 -000.0000007813 -000.0000007812 -000.00011719 -000.00015625 c -000.24600094 000.16000156 -000.58200031 000.10001563 -000.757812 -000.144531 c -000.175782 -000.238281 -000.12890007 -000.574219 000.00097656 -000.765625 c -000.000000390006 000 -000.0000007813 -000.000000390006 -000.00011719 -000.0000007812 c 000.00027344 -000.00023438 000.0005000781 -000.00046876 000.00074219 -000.00074219 c 000.328125 -000.445313 000.226562 -1.0007000313 -000.21875 -1.398438 c -000.15625 -000.10009375 -000.339844 -000.175781 -000.53125 -000.1875 c -000.339844 -000.00019531 -000.66400063 000.136719 -000.867188 000.41000157 c -000.00015625 000.0003125 -000.0003125 000.00058593 -000.00046875 000.00089843 c -000.000000390006 000 -000.0000007812 -000.000000390006 -000.00011719 -000.000000390006 c -000.10009374 000.273437 -000.41400062 000.421875 -000.70003124 000.328125 c -000.285157 -000.00089844 -000.445313 -000.394531 -000.37100094 -000.679688 c 000 000 000 000 -000.000000390006 000 c 000.000000390006 -000.00035156 000.0000007812 -000.0006640006 000.0000007812 -000.10001562 c 000 -000.55000781 -000.449219 -1 -1 -1 z m 000 3.5 c 1.37890006 000 2.5 1.12100094 2.5 2.5 s -1.12100094 2.5 -2.5 2.5 s -2.5 -1.12100094 -2.5 -2.5 s 1.12100094 -2.5 2.5 -2.5 z m -7.00011719 6 c -1.367187 000 -2.4999998 1.132812 -2.4999998 2.5 s 1.1328128 2.5 2.4999998 2.5 c 1.367188 000 2.5 -1.132812 2.5 -2.5 s -1.132812 -2.5 -2.5 -2.5 z m 000 2 c 000.28900063 000 000.5 000.21000938 000.5 000.5 s -000.21000937 000.5 -000.5 000.5 c -000.28900062 000 -000.5 -000.21000938 -000.5 -000.5 s 000.21000938 -000.5 000.5 -000.5 z m 000 000"></path>
+                </g>
+            </svg>
+            
+         
+            <h2 class="text-[24px] md:text-[28px] text-black font-medium group-hover:text-white transition-all duration-300">
+                Yüksek Basınç ve <br> Sistemleri
+            </h2>
+            
+     
+            <p class="text-sm text-gray-600 group-hover:text-white transition-all duration-300 mt-3 hidden md:block">
+                Elementum eu enim, amet, elementum bibendum fermentum.
+            </p>
+        
+       
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" 
+                class="w-6 h-6 absolute bottom-5 right-2 stroke-black group-hover:stroke-white transition-all">
+                <path d="M7 12H17M17 12L13 8M17 12L13 16" 
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        
+        </div>
+
+        <div class="w-auto h-32 md:w-[360px] md:h-64 group hover:bg-[#96BC41] p-6 transition-all duration-300 relative">
+            
+   
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="black" class="absolute top-2 right-2 lg:top-6 lg:right-6 w-6 h-6 opacity-80 group-hover:opacity-100 group-hover:fill-white transition-all">
+                <g id="SVGRepo_iconCarrier"> 
+                    <path d="m 9.5 000.5 c -000.55000781 000 -1 000.449219 -1 1 c 000.000000390006 000.00035156 000.0000007812 000.0006640006 000.00015625 000.00097656 c -000.000000390006 000.000000390006 -000.00011719 000.000000390006 -000.00015625 000.000000390006 c 000.00054688 000.21000938 -000.00011719 000.433594 -000.175781 000.574219 c -000.00058594 000.00046875 -000.125 000.00085938 -000.195313 000.10009375 c -000.285156 000.00089844 -000.589844 -000.00058594 -000.699218 -000.33200031 c 000 000 -000.000000390007 000 -000.0000007813 000.000000390006 c -000.00015625 -000.0003125 -000.00035156 -000.000625 -000.00054687 -000.00089843 c -000.199219 -000.273438 -000.523438 -000.429688 -000.863282 -000.41000157 c -000.19140006 000.00011719 -000.375 000.00078125 -000.53125 000.19140007 c -000.445312 000.324218 -000.546875 000.949218 -000.222656 1.394531 c 000.00023438 000.00027343 000.0005000781 000.0005000781 000.00074219 000.00074219 c 000 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011718 c 000.16400063 000.136719 000.238282 000.355469 000.1875 000.56640006 c -000.00015625 000.0007000313 -000.00046875 000.14000626 -000.0009375 000.199219 c -000.175781 000.242188 -000.50007812 000.3000000781 -000.757812 000.144531 c 000 000 000 000.000000390007 -000.000000390006 000.000000390007 c -000.0003125 -000.00015625 -000.000625 -000.00027344 -000.0009375 -000.0003900063 c -000.00089844 -000.0003125 -000.1875 -000.00046875 -000.28125 -000.00046875 c -000.445313 -000.00015625 -000.84375 000.265625 -000.98000469 000.69140007 c -000.171875 000.523437 000.117187 1.00085937 000.64000625 1.257812 c 000.00035156 000.0000007812 000.0006640006 000.00011719 000.10001562 000.00015625 c 000 000.000000390006 000 000.0000007813 -000.000000390006 000.00015625 c 000.21875 000.00011719 000.41000156 000.144531 000.492188 000.347656 c 000.00027343 000.0006640006 000.00042968 000.14000625 000.00042968 000.214844 c 000 000.3000000781 -000.238281 000.542969 -000.535156 000.5625 c 000.000000390006 000.000000390006 000.000000390006 000.0000007812 000.000000390006 000.00015625 c -000.00035156 000.000000390006 -000.0006640006 000.0000007813 -000.10001562 000.00015625 c -000.523438 000.171875 -000.8125 000.734375 -000.64000625 1.261719 c 000.171875 000.523437 000.734375 000.8125 1.261719 000.64000625 c 000.0003125 -000.00011719 000.000625 -000.00023438 000.0009375 -000.0003900063 c 000.000000390006 000.000000390007 000.000000390006 000.000000390007 000.000000390006 000.0000007813 c 000.00085937 -000.00054688 000.179687 -000.00085938 000.277344 -000.00089844 c 000.113281 -000.0000007812 000.222656 000.00019531 000.32000312 000.0008200031 c 000.000625 000.0003900063 000.12100094 000.00089844 000.16400062 000.152344 c 000.175782 000.242187 000.125 000.574219 -000.10001562 000.761719 l 000.00011719 000.00011718 c -000.00023438 000.00023438 -000.0005000781 000.00046876 -000.00074219 000.00074219 c -000.324219 000.445313 -000.222656 1.0007000313 000.222656 1.398438 c 000.445313 000.324219 1.0007000313 000.222656 1.394532 -000.222657 c 000.00019531 -000.00027343 000.0003900062 -000.00054687 000.00054687 -000.00085937 c 000.000000390006 000 000.000000390006 000 000.0000007813 000.000000390006 c 000.00078124 -000.20003125 000.261718 -000.34375 000.48000468 -000.359375 c 000.00074219 -000.0000007812 000.148438 000.000000390006 000.21875 000.00027344 c 000.28900063 000.00089844 000.449219 000.394531 000.37100094 000.679688 c 000.0000007812 000 000.00011719 000 000.00015625 000.000000390006 c -000.0000007813 000.0003125 -000.00011719 000.0006640006 -000.00015625 000.00097656 c 000 000.55000781 000.449219 1 1 1 s 1 -000.449219 1 -1 c 000 -000.00035156 -000.000000390006 -000.0006640006 -000.0000007812 -000.10001562 h 000.000000390006 c -000.00074219 -000.28900063 000.00089844 -000.589844 000.375 -000.683594 c 000.00074218 -000.00023438 000.148437 -000.0003125 000.222656 -000.00023438 c 000.2000700031 000.00015625 000.394531 000.152344 000.472656 000.359375 c 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 000.00015625 -000.0000007812 c 000.00015625 000.0003125 000.0003125 000.00058593 000.00046875 000.00089843 c 000.328125 000.445313 000.953125 000.546876 1.398438 000.222657 c 000.445312 -000.328125 000.546875 -000.953125 000.21875 -1.398438 c -000.00023438 -000.00027343 -000.00046875 -000.0005000781 -000.00074219 -000.00074219 c 000.000000390006 -000.000000390006 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 c -000.226563 -000.19140006 -000.273438 -000.527344 -000.00097656 -000.769531 c 000.113281 -000.15625 000.296874 -000.238281 000.476562 -000.23000469 c 000.00097656 000.000000390006 000.195312 000.0003125 000.28125 000.00085938 c 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011719 -000.00011719 c 000.00027343 000.00015625 000.00058593 000.0003125 000.00089843 000.00046875 c 000.527344 000.171875 1.00089844 -000.117188 1.261719 -000.64000625 c 000.171875 -000.527344 -000.117187 -1.00089844 -000.64000625 -1.261719 c -000.00035156 -000.0000007812 -000.0006640006 -000.00011719 -000.10001562 -000.00019531 c 000 -000.000000390007 000 -000.0000007813 000.000000390006 -000.00011719 c -000.296875 -000.00019531 -000.535156 -000.265625 -000.535156 -000.56640006 c 000 -000.296875 000.238281 -000.53900063 000.535156 -000.558594 c -000.000000390006 -000.000000390006 -000.000000390006 -000.00011719 -000.000000390006 -000.00015625 c 000.00035156 -000.000000390006 000.0006640006 -000.0000007813 000.10001562 -000.00015625 c 000.523438 -000.171875 000.8125 -000.734375 000.64000625 -1.261719 c -000.136719 -000.421875 -000.535156 -000.70003125 -000.98000469 -000.6875 c -000.0009375 000 -000.19140006 000.00015625 -000.28125 000.00046875 c -000.0003125 000.00015625 -000.000625 000.0003125 -000.00089843 000.00046875 c -000.000000390007 -000.000000390006 -000.0000007813 -000.0000007812 -000.00011719 -000.00015625 c -000.24600094 000.16000156 -000.58200031 000.10001563 -000.757812 -000.144531 c -000.175782 -000.238281 -000.12890007 -000.574219 000.00097656 -000.765625 c -000.000000390006 000 -000.0000007813 -000.000000390006 -000.00011719 -000.0000007812 c 000.00027344 -000.00023438 000.0005000781 -000.00046876 000.00074219 -000.00074219 c 000.328125 -000.445313 000.226562 -1.0007000313 -000.21875 -1.398438 c -000.15625 -000.10009375 -000.339844 -000.175781 -000.53125 -000.1875 c -000.339844 -000.00019531 -000.66400063 000.136719 -000.867188 000.41000157 c -000.00015625 000.0003125 -000.0003125 000.00058593 -000.00046875 000.00089843 c -000.000000390006 000 -000.0000007812 -000.000000390006 -000.00011719 -000.000000390006 c -000.10009374 000.273437 -000.41400062 000.421875 -000.70003124 000.328125 c -000.285157 -000.00089844 -000.445313 -000.394531 -000.37100094 -000.679688 c 000 000 000 000 -000.000000390006 000 c 000.000000390006 -000.00035156 000.0000007812 -000.0006640006 000.0000007812 -000.10001562 c 000 -000.55000781 -000.449219 -1 -1 -1 z m 000 3.5 c 1.37890006 000 2.5 1.12100094 2.5 2.5 s -1.12100094 2.5 -2.5 2.5 s -2.5 -1.12100094 -2.5 -2.5 s 1.12100094 -2.5 2.5 -2.5 z m -7.00011719 6 c -1.367187 000 -2.4999998 1.132812 -2.4999998 2.5 s 1.1328128 2.5 2.4999998 2.5 c 1.367188 000 2.5 -1.132812 2.5 -2.5 s -1.132812 -2.5 -2.5 -2.5 z m 000 2 c 000.28900063 000 000.5 000.21000938 000.5 000.5 s -000.21000937 000.5 -000.5 000.5 c -000.28900062 000 -000.5 -000.21000938 -000.5 -000.5 s 000.21000938 -000.5 000.5 -000.5 z m 000 000"></path>
+                </g>
+            </svg>
+        
+            <h2 class="text-[24px] md:text-[28px] text-black font-medium group-hover:text-white transition-all duration-300">
+                Sarf Malzemeler
+            </h2>
+            
+      
+            <p class="text-sm text-gray-600 group-hover:text-white transition-all duration-300 mt-3 hidden md:block">
+                Lorem ipsum dolor sit amet, adipiscing elit elementum eu enim, amet, elementum bibendum.
+            </p>
+        
+      
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" 
+                class="w-6 h-6 absolute bottom-5 right-2 stroke-black group-hover:stroke-white transition-all">
+                <path d="M7 12H17M17 12L13 8M17 12L13 16" 
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        
+        </div>
+        
+        <div class="w-auto h-32 md:w-[360px] md:h-64 group hover:bg-[#96BC41] p-6 transition-all duration-300 relative">
+            
+           
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="black" class="absolute top-2 right-2 lg:top-6 lg:right-6 w-6 h-6 opacity-80 group-hover:opacity-100 group-hover:fill-white transition-all">
+                <g id="SVGRepo_iconCarrier"> 
+                    <path d="m 9.5 000.5 c -000.55000781 000 -1 000.449219 -1 1 c 000.000000390006 000.00035156 000.0000007812 000.0006640006 000.00015625 000.00097656 c -000.000000390006 000.000000390006 -000.00011719 000.000000390006 -000.00015625 000.000000390006 c 000.00054688 000.21000938 -000.00011719 000.433594 -000.175781 000.574219 c -000.00058594 000.00046875 -000.125 000.00085938 -000.195313 000.10009375 c -000.285156 000.00089844 -000.589844 -000.00058594 -000.699218 -000.33200031 c 000 000 -000.000000390007 000 -000.0000007813 000.000000390006 c -000.00015625 -000.0003125 -000.00035156 -000.000625 -000.00054687 -000.00089843 c -000.199219 -000.273438 -000.523438 -000.429688 -000.863282 -000.41000157 c -000.19140006 000.00011719 -000.375 000.00078125 -000.53125 000.19140007 c -000.445312 000.324218 -000.546875 000.949218 -000.222656 1.394531 c 000.00023438 000.00027343 000.0005000781 000.0005000781 000.00074219 000.00074219 c 000 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011718 c 000.16400063 000.136719 000.238282 000.355469 000.1875 000.56640006 c -000.00015625 000.0007000313 -000.00046875 000.14000626 -000.0009375 000.199219 c -000.175781 000.242188 -000.50007812 000.3000000781 -000.757812 000.144531 c 000 000 000 000.000000390007 -000.000000390006 000.000000390007 c -000.0003125 -000.00015625 -000.000625 -000.00027344 -000.0009375 -000.0003900063 c -000.00089844 -000.0003125 -000.1875 -000.00046875 -000.28125 -000.00046875 c -000.445313 -000.00015625 -000.84375 000.265625 -000.98000469 000.69140007 c -000.171875 000.523437 000.117187 1.00085937 000.64000625 1.257812 c 000.00035156 000.0000007812 000.0006640006 000.00011719 000.10001562 000.00015625 c 000 000.000000390006 000 000.0000007813 -000.000000390006 000.00015625 c 000.21875 000.00011719 000.41000156 000.144531 000.492188 000.347656 c 000.00027343 000.0006640006 000.00042968 000.14000625 000.00042968 000.214844 c 000 000.3000000781 -000.238281 000.542969 -000.535156 000.5625 c 000.000000390006 000.000000390006 000.000000390006 000.0000007812 000.000000390006 000.00015625 c -000.00035156 000.000000390006 -000.0006640006 000.0000007813 -000.10001562 000.00015625 c -000.523438 000.171875 -000.8125 000.734375 -000.64000625 1.261719 c 000.171875 000.523437 000.734375 000.8125 1.261719 000.64000625 c 000.0003125 -000.00011719 000.000625 -000.00023438 000.0009375 -000.0003900063 c 000.000000390006 000.000000390007 000.000000390006 000.000000390007 000.000000390006 000.0000007813 c 000.00085937 -000.00054688 000.179687 -000.00085938 000.277344 -000.00089844 c 000.113281 -000.0000007812 000.222656 000.00019531 000.32000312 000.0008200031 c 000.000625 000.0003900063 000.12100094 000.00089844 000.16400062 000.152344 c 000.175782 000.242187 000.125 000.574219 -000.10001562 000.761719 l 000.00011719 000.00011718 c -000.00023438 000.00023438 -000.0005000781 000.00046876 -000.00074219 000.00074219 c -000.324219 000.445313 -000.222656 1.0007000313 000.222656 1.398438 c 000.445313 000.324219 1.0007000313 000.222656 1.394532 -000.222657 c 000.00019531 -000.00027343 000.0003900062 -000.00054687 000.00054687 -000.00085937 c 000.000000390006 000 000.000000390006 000 000.0000007813 000.000000390006 c 000.00078124 -000.20003125 000.261718 -000.34375 000.48000468 -000.359375 c 000.00074219 -000.0000007812 000.148438 000.000000390006 000.21875 000.00027344 c 000.28900063 000.00089844 000.449219 000.394531 000.37100094 000.679688 c 000.0000007812 000 000.00011719 000 000.00015625 000.000000390006 c -000.0000007813 000.0003125 -000.00011719 000.0006640006 -000.00015625 000.00097656 c 000 000.55000781 000.449219 1 1 1 s 1 -000.449219 1 -1 c 000 -000.00035156 -000.000000390006 -000.0006640006 -000.0000007812 -000.10001562 h 000.000000390006 c -000.00074219 -000.28900063 000.00089844 -000.589844 000.375 -000.683594 c 000.00074218 -000.00023438 000.148437 -000.0003125 000.222656 -000.00023438 c 000.2000700031 000.00015625 000.394531 000.152344 000.472656 000.359375 c 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 000.00015625 -000.0000007812 c 000.00015625 000.0003125 000.0003125 000.00058593 000.00046875 000.00089843 c 000.328125 000.445313 000.953125 000.546876 1.398438 000.222657 c 000.445312 -000.328125 000.546875 -000.953125 000.21875 -1.398438 c -000.00023438 -000.00027343 -000.00046875 -000.0005000781 -000.00074219 -000.00074219 c 000.000000390006 -000.000000390006 000.0000007813 -000.000000390006 000.00011719 -000.0000007812 c -000.226563 -000.19140006 -000.273438 -000.527344 -000.00097656 -000.769531 c 000.113281 -000.15625 000.296874 -000.238281 000.476562 -000.23000469 c 000.00097656 000.000000390006 000.195312 000.0003125 000.28125 000.00085938 c 000.000000390006 -000.000000390007 000.0000007812 -000.0000007813 000.00011719 -000.00011719 c 000.00027343 000.00015625 000.00058593 000.0003125 000.00089843 000.00046875 c 000.527344 000.171875 1.00089844 -000.117188 1.261719 -000.64000625 c 000.171875 -000.527344 -000.117187 -1.00089844 -000.64000625 -1.261719 c -000.00035156 -000.0000007812 -000.0006640006 -000.00011719 -000.10001562 -000.00019531 c 000 -000.000000390007 000 -000.0000007813 000.000000390006 -000.00011719 c -000.296875 -000.00019531 -000.535156 -000.265625 -000.535156 -000.56640006 c 000 -000.296875 000.238281 -000.53900063 000.535156 -000.558594 c -000.000000390006 -000.000000390006 -000.000000390006 -000.00011719 -000.000000390006 -000.00015625 c 000.00035156 -000.000000390006 000.0006640006 -000.0000007813 000.10001562 -000.00015625 c 000.523438 -000.171875 000.8125 -000.734375 000.64000625 -1.261719 c -000.136719 -000.421875 -000.535156 -000.70003125 -000.98000469 -000.6875 c -000.0009375 000 -000.19140006 000.00015625 -000.28125 000.00046875 c -000.0003125 000.00015625 -000.000625 000.0003125 -000.00089843 000.00046875 c -000.000000390007 -000.000000390006 -000.0000007813 -000.0000007812 -000.00011719 -000.00015625 c -000.24600094 000.16000156 -000.58200031 000.10001563 -000.757812 -000.144531 c -000.175782 -000.238281 -000.12890007 -000.574219 000.00097656 -000.765625 c -000.000000390006 000 -000.0000007813 -000.000000390006 -000.00011719 -000.0000007812 c 000.00027344 -000.00023438 000.0005000781 -000.00046876 000.00074219 -000.00074219 c 000.328125 -000.445313 000.226562 -1.0007000313 -000.21875 -1.398438 c -000.15625 -000.10009375 -000.339844 -000.175781 -000.53125 -000.1875 c -000.339844 -000.00019531 -000.66400063 000.136719 -000.867188 000.41000157 c -000.00015625 000.0003125 -000.0003125 000.00058593 -000.00046875 000.00089843 c -000.000000390006 000 -000.0000007812 -000.000000390006 -000.00011719 -000.000000390006 c -000.10009374 000.273437 -000.41400062 000.421875 -000.70003124 000.328125 c -000.285157 -000.00089844 -000.445313 -000.394531 -000.37100094 -000.679688 c 000 000 000 000 -000.000000390006 000 c 000.000000390006 -000.00035156 000.0000007812 -000.0006640006 000.0000007812 -000.10001562 c 000 -000.55000781 -000.449219 -1 -1 -1 z m 000 3.5 c 1.37890006 000 2.5 1.12100094 2.5 2.5 s -1.12100094 2.5 -2.5 2.5 s -2.5 -1.12100094 -2.5 -2.5 s 1.12100094 -2.5 2.5 -2.5 z m -7.00011719 6 c -1.367187 000 -2.4999998 1.132812 -2.4999998 2.5 s 1.1328128 2.5 2.4999998 2.5 c 1.367188 000 2.5 -1.132812 2.5 -2.5 s -1.132812 -2.5 -2.5 -2.5 z m 000 2 c 000.28900063 000 000.5 000.21000938 000.5 000.5 s -000.21000937 000.5 -000.5 000.5 c -000.28900062 000 -000.5 -000.21000938 -000.5 -000.5 s 000.21000938 -000.5 000.5 -000.5 z m 000 000"></path>
+                </g>
+            </svg>
+         
+            <h2 class="text-[24px] md:text-[28px] text-black font-medium group-hover:text-white transition-all duration-300">
+                Endüstriyel ve Özel Dizayn Çözümler
+            </h2>
+            
+            
+            <p class="text-sm text-gray-600 group-hover:text-white transition-all duration-300 mt-3 hidden md:block">
+                Lorem ipsum dolor sit amet, adipiscing elit. Elementum eu enim, amet, elementum bibendum fermentum.
+            </p>
+        
+           
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" 
+                class="w-6 h-6 absolute bottom-5 right-2 stroke-black group-hover:stroke-white transition-all">
+                <path d="M7 12H17M17 12L13 8M17 12L13 16" 
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        
+        </div>
+    </div>
+</div>
+
+<div class="w-full lg:w-[1140px] h-auto mx-auto text-left py-8 lg:py-16 px-4 font-thin font-sans lg:ml-[136px]">
+    <h2 class="text-2xl md:text-4xl text-black mb-6 lg:mb-8">Haberler</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+       
+        <div class="w-[262px] h-auto lg:h-[367px] group relative">
+     
+           
+            <div class="relative group overflow-hidden">
+                <img src="./assets/samantha-gades-BlIhVfXbi9s-unsplash 1.png"
+                    class="w-full h-full object-cover transition-all duration-300 group-hover:scale-105">
+                    <div class="absolute bottom-0 left-0 right-0 bg-white/80 text-black p-3">consectetur sagittis facilisis...</div>
+
+                <div class="absolute inset-0 bg-[#96BC41] transition-all duration-300 scale-0 group-hover:scale-100">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-10 h-8 absolute left-[100px] top-16">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier"> 
+                    <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                    </g>
+                </svg>
+                </div>
+            </div>
+            
+
+            <p class="text-sm text-gray-600 transition-all duration-300 mt-3 ">
+                ornare interdum id facilisis. Turpis nunc scelerisque amet id ornare interdum id facilisis. consectetur adipiscing elit. Lorem ipsum dolor...
+            </p>
+        
+        
+        </div>
+       
+        <div class="w-[262px] h-auto lg:h-[367px] group relative">
+     
+           
+            <div class="relative group overflow-hidden">
+                <img src="./assets/pierre-chatel-innocenti-pxoZSTdAzeU-unsplash 1.png"
+                    class="w-full h-full object-cover transition-all duration-300 group-hover:scale-105">
+                    <div class="absolute bottom-0 left-0 right-0 bg-white/80 text-black p-3">aliquam netus adipiscing elit...</div>
+
+                <div class="absolute inset-0 bg-[#96BC41] transition-all duration-300 scale-0 group-hover:scale-100">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-10 h-8 absolute left-[100px] top-16">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier"> 
+                    <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                    </g>
+                </svg>
+                </div>
+            </div>
+ 
+            <p class="text-sm text-gray-600 transition-all duration-300 mt-3">
+                scelerisque amet id ornare interdum id facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis nunc scelerisque amet id...
+            </p>
+        
+        
+        </div>
+
+        <div class="w-[262px] h-auto lg:h-[367px] group relative">
+     
+           
+            <div class="relative group overflow-hidden">
+                <img src="./assets/bench-accounting-nvzvOPQW0gc-unsplash 1.png"
+                    class="w-full h-full object-cover transition-all duration-300 group-hover:scale-105">
+                    <div class="absolute bottom-0 left-0 right-0 bg-white/80 text-black p-3">Turpis nunc scelerisque amet id...</div>
+                <div class="absolute inset-0 bg-[#96BC41] transition-all duration-300 scale-0 group-hover:scale-100">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-10 h-8 absolute left-[100px] top-16">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier"> 
+                    <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                    </g>
+                </svg>
+                </div>
+            </div>
+            
+
+            <p class="text-sm text-gray-600 transition-all duration-300 block">
+                Consectetur adipiscing elit. Turpis nunc scelerisque amet id ornare interdum id facilisis consectetur. Lorem ipsum dolor sit amet...
+            </p>
+        
+        
+        </div>
+
+    </div>
+</div>
+
+<div class="w-full lg:w-[1140px] h-auto mx-auto text-left py-8 lg:py-16 px-4 font-thin font-sans lg:ml-[136px] relative">
+    <h2 class="text-2xl md:text-4xl text-black mb-6 lg:mb-8">Referanslar</h2>
+    
+    
+    <div class="relative">
+        <img src="./assets/map.png" alt="Harita" class="w-full">
+
+       
+        <div class="absolute top-[41%] left-[55%] group">
+            <div class="w-3 h-3 bg-[#96BC41] rounded-full animate-pulse"></div>
+            <div class="absolute left-5 top-[-10px] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                Türkiye
+            </div>
+        </div>
+
+       
+        <div class="absolute top-[40%] left-[20%] group">
+            <div class="w-3 h-3 bg-[#96BC41] rounded-full animate-pulse"></div>
+            <div class="absolute left-5 top-[-10px] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                ABD
+            </div>
+        </div>
+
+       
+        <div class="absolute top-[32%] left-[48%] group">
+            <div class="w-3 h-3 bg-[#96BC41] rounded-full animate-pulse"></div>
+            <div class="absolute left-5 top-[-10px] bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                Almanya
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-[#FBFBFC] lg:h-[616px] h-full w-full p-2">
+    <div class="absolute">
+        <img src="./assets/logoalt.png" alt="" class="w-36 h-16 lg:mt-[43px] lg:ml-[150px]">
+        <p class="text-lg ml-auto lg:ml-[150px] mt-7 text-gray-600 font-thin font-sans border-b-2 before:absolute before:right-[-50px] before:-top-1 before:h-[530px] before:w-[2px] before:bg-gray-300 before:hidden lg:before:block">
+            Lorem ipsum dolor sit amet, consectetur <br> 
+            adipiscing elit. Elementum eu enim, <br> 
+            amet, elementum bibendum fermentum. <br> 
+            Suscipit consectetur netus placerat in <br> 
+            hac sagittis. Morbi facilisis congue sit <br> 
+            tempor nulla.
+        </p>
+    </div>
+
+
+    <div class="flex items-center space-x-5 ml-0 lg:ml-[145px] mt-[345px]">
+    
+      
+        <div class="w-[60px] h-[60px] group">
+            <a href="#">
+                <svg 
+                    class="fill-[#5D6E83] group-hover:fill-[#96BC41] transition duration-300"
+                    viewBox="-2.4 -2.4 28.80 28.80"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-name="Layer 1">
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M20.9,2H3.1A1.1,1.1,0,0,0,2,3.1V20.9A1.1,1.1,0,0,0,3.1,22h9.58V14.25h-2.6v-3h2.6V9a3.64,3.64,0,0,1,3.88-4,20.26,20.26,0,0,1,2.33.12v2.7H17.3c-1.26,0-1.5.6-1.5,1.47v1.93h3l-.39,3H15.8V22h5.1A1.1,1.1,0,0,0,22,20.9V3.1A1.1,1.1,0,0,0,20.9,2Z"></path>
+                    </g>
+                </svg>
+            </a>
+        </div>
+    
+   
+        <div class="w-10 h-10 group mt-[-13px]">
+            <a href="#">
+                <svg 
+                    class="fill-[#5D6E83] group-hover:fill-[#96BC41] transition duration-300"
+                    xmlns="http://www.w3.org/2000/svg" 
+                    x="0px" 
+                    y="0px" 
+                    width="55" 
+                    height="55" 
+                    viewBox="0 0 24 24">
+                    <path d="M 3 3 L 3 21 L 21 21 L 21 3 L 3 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"></path>
+                </svg>
+            </a>
+        </div>
+    
+      
+        <div class="w-14 h-14 mt-4 group absolute left-[150px] lg:left-[300px]">
+            <a href="#">
+                <svg 
+                    class="w-10 h-10 p-2 bg-[#5D6E83] group-hover:bg-[#96BC41] transition duration-300"
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 24 24">
+                    <path fill="white" d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.611 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.896-.957-2.173-1.555-3.591-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .385.044.76.127 1.122-4.087-.205-7.715-2.164-10.141-5.144-.423.726-.666 1.562-.666 2.475 0 1.71.87 3.214 2.188 4.096-.807-.026-1.566-.247-2.228-.616v.062c0 2.385 1.693 4.374 3.946 4.828-.413.112-.849.171-1.296.171-.318 0-.626-.031-.927-.088.627 1.956 2.445 3.379 4.6 3.419-1.685 1.319-3.808 2.105-6.115 2.105-.398 0-.79-.023-1.177-.067 2.179 1.396 4.768 2.212 7.557 2.212 9.054 0 14.002-7.496 14.002-13.986 0-.213-.004-.426-.013-.637.961-.695 1.796-1.562 2.457-2.549z"></path>
+                </svg>
+            </a>
+        </div>
+        
+    </div>
+    <nav class="w-[189px] h-[205px] lg:ml-[580px] lg:mt-[-340px] mt-20">
+        <p class="text-md text-[#5D6E83] relative after:block after:w-[100px] after:h-[2px] after:bg-[#96BC41] after:mt-4">ŞİRKET</p>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">HAKKIMIZDA</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">MİSYON & VİZYON</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">İŞ VE KARİYER</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">REFERANSLAR</p>
+       </a>
+    </nav>
+    <nav class="w-[189px] h-[403px] lg:ml-[760px] lg:mt-[-205px] mt-20">
+        <p class="text-md text-[#5D6E83] relative after:block after:w-[100px] after:h-[2px] after:bg-[#96BC41] after:mt-4">ÜRÜNLER</p>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">KARIŞTIRICI VE HOMOJENİZATÖR</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">ŞEKİLLENDİRME VE BİÇİMLENDİRME</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">ENERJİ SİSTEMLERİ</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">YÜKSEK BASINÇ VE TEST SİSTEMLERİ</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">SARF MALZEMELER</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">ENDÜSTRİYEL VE ÖZEL DİZAYN ÇÖZÜMLER</p>
+       </a>
+    </nav>
+    <nav class="w-[189px] h-[403px] lg:ml-[978px] lg:mt-[-405px] mt-20">
+        <p class="text-md text-[#5D6E83] relative after:block after:w-[100px] after:h-[2px] after:bg-[#96BC41] after:mt-4">SEKTÖRLER</p>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">SERAMİK</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">CAM</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41] ">METALÜRJİ VE MALZEME</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">MADEN</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">ÇEVRE VE ENERJİ</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">KİMYA</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">GIDA</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">UZAY VE HAVACILIK</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">İLAÇ</p>
+       </a>
+    </nav>
+    <nav class="w-[189px] h-[403px] lg:ml-[1200px] lg:mt-[-405px] mt-20">
+        <p class="text-md text-[#5D6E83] relative after:block after:w-[100px] after:h-[2px] after:bg-[#96BC41] after:mt-4">İLETİŞİM</p>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">+90 850 303 7441</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41]">merhaba@kumsalajans.com</p>
+       </a>
+       <a href="">
+        <p class="text-md text-[#5D6E83] mt-4 hover:text-[#96BC41] ">Cevizli Mah. Tugayyolu Cad. No:12 Nuvo Dragos A-71 Maltepe / İstanbul </p>
+       </a>
+    </nav>
+    <nav class="w-full h-[60px] bg-[#EAECF0] mt-[85px] ml-0 justify-between p-4">
+        <p class="ml-[150px] text-[#5D6E83]">mseteknoloji.com.tr</p>
+        <img src="./assets/kumsal-logo.png" alt="" class="ml-[1300px] -mt-3">
+    </nav>
+
+    
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
