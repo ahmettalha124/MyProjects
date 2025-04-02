@@ -1,0 +1,464 @@
+body.girisyap {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: indianred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body.kayıtol {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: indianred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.containergiris {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+body.kayitol {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: indianred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerkayit {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+body.ana.sayfa {
+    background-image: url(./anasayfa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 400vh;
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #2c3e50;
+    color: white;
+    padding: 20px 30px;
+    opacity: 0.9;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: indianred;
+}
+
+.sidebar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2c3e50;
+    opacity: 0.9;
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.sidebar p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar button {
+    background-color: indianred;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.sidebar button a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar button:hover {
+    background-color: indianred;
+}
+
+.hizmetler {
+    padding: 50px 0;
+    background-color: rgba(249, 249, 249, 0.9);
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-top: 955px;
+}
+
+.odalar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.oda {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.oda:hover {
+    transform: scale(1.05);
+}
+
+.oda-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.oda h3 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.oda p {
+    font-size: 18px;
+    color: #666;
+}
+
+.oda:hover {
+    transform: scale(1.05);
+}
+
+.hakkimizda {
+    padding: 50px 20px;
+    background-color: rgba(249, 249, 249, 0.9);
+    text-align: center;
+}
+
+.hakkimizda h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hakkimizda p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hakkimizda h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.hakkimizda p span {
+    font-weight: bold;
+}
+
+.hakkimizda .contact-info {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.hakkimizda .contact-info p {
+    margin-bottom: 10px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    z-index: 1000;
+}
+
+body.rezervasyon {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.rezervasyon-sidebar {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.rezervasyon-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rezervasyon-form label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+    width: 100%;
+}
+
+.rezervasyon-form input,
+.rezervasyon-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.rezervasyon-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.rezervasyon-form button:hover {
+    background-color: #0056b3;
+}
+
+body.adminpanel {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+.adminpanel {
+    margin-top: 60px;
+    padding: 20px;
+}
+
+
+.admin-panel-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+a {
+    color: rgb(34, 0, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
